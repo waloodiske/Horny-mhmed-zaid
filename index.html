@@ -30,15 +30,15 @@
         }
 
         .title {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
             font-size: 3em;
             color: black;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             -webkit-tap-highlight-color: transparent;
-            display: inline-block; /* Add this line */
+            display: inline-block; /* Ensure text doesn't overlap */
+            position: relative; /* Switch to relative positioning */
+            top: 20px; /* Adjust top margin */
+            left: 50%;
+            transform: translateX(-50%);
         }
     </style>
 </head>
