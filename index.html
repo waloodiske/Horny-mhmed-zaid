@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Images</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Set a light background color */
+            overflow: hidden; /* Hide any overflowing content */
+        }
+
+        .container {
+            position: relative;
+            width: 100vw; /* Set container width to 100% of viewport width */
+            height: 100vh; /* Set container height to 100% of viewport height */
+            text-align: center;
+        }
+
+        img {
+            cursor: pointer;
+            width: 100%; /* Ensure the image fills the entire width of its container */
+            height: 100%; /* Ensure the image fills the entire height of its container */
+            object-fit: cover; /* Scale the image while maintaining aspect ratio and covering the container */
+            -webkit-tap-highlight-color: transparent; /* Disable tap highlighting */
+            touch-action: none; /* Prevents the default touch behavior */
+        }
+
+        .title {
+            position: absolute;
+            top: 20px; /* Set title position from the top */
+            left: 50%;
+            transform: translateX(-50%); /* Center the title horizontally */
+            font-size: 3em; /* Increase the font size */
+            color: #333; /* Set title color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect to the title */
+            -webkit-tap-highlight-color: transparent; /* Disable tap highlighting */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="image.jpg" onclick="playSound()" oncontextmenu="return false;">
+        <div class="title">Touch Me</div>
+    </div>
+    <audio id="sound" src="sound.mp3"></audio>
+
+    <script>
+        function playSound() {
+            var audio = document.getElementById("sound");
+            audio.play();
+        }
+    </script>
+</body>
+</html>
