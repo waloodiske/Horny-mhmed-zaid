@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horny Ali</title>
+    <title>Interactive Images</title>
     <style>
         body {
             margin: 0;
@@ -31,20 +31,24 @@
 
         .title {
             position: absolute;
-            top: 20px; /* Set title position from the top */
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%); /* Center the title horizontally */
+            transform: translate(-50%, -50%); /* Center the title vertically and horizontally */
             font-size: 3em; /* Increase the font size */
-            color: black; /* Set title color */
+            color: black; /* Set title color to black */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect to the title */
             -webkit-tap-highlight-color: transparent; /* Disable tap highlighting */
+        }
+
+        .title span {
+            display: inline-block; /* Make each word in the title appear side by side */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="image.jpg" onclick="playSound()" oncontextmenu="return false;">
-        <div class="title">Touch Me</div>
+        <div class="title"><span>Touch</span> <span>Me</span></div>
     </div>
     <audio id="sound" src="sound.mp3"></audio>
 
